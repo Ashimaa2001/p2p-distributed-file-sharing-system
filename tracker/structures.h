@@ -209,6 +209,7 @@ private:
     set<string> files_shared;
     string ip;
     int port;
+    set<pair<string, string>> downloads;
 
 public:
     Client() {
@@ -230,6 +231,14 @@ public:
 
     int getPort() {
         return port;
+    }
+
+    void addToDownload(string fileName, string groupId){
+        downloads.insert(pair(fileName, groupId));
+    }
+
+    set<pair<string, string>> showDownloads(){
+        return downloads;
     }
 };
 

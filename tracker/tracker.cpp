@@ -160,8 +160,6 @@ void selectRarestPieces(int group_id, const string& fileName) {
         return a.second < b.second;
     });
 
-    //some logic to associate each chunk with a client ip port
-    //this can be shared with the client requesting a download
 
 }
 
